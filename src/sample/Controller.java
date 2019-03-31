@@ -1,9 +1,15 @@
 package sample;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Controller {
     HoldMyObsList listna = new HoldMyObsList();
@@ -16,10 +22,14 @@ public class Controller {
     TableColumn<FilmObject , String> filmTitleCol , filmDescCol , filmYearCol , languageCol , specialFeaturesCol, categoryNameCol, ratingCol;
     @FXML
     TableColumn<FilmObject , Double> rentalDurCol , rentalRateCol , replaceCostCol;
+    @FXML
+    ListView<ActorObject> actorList;
 
     public void initialize(){
         JdbcTest.ConnectToDB();
         filmTable.setItems(listna.getHoldMyFilm());
+        actorList.setItems(listna.getHoldMyActor());
+
         filmIdCol.setCellValueFactory(new PropertyValueFactory<>("filmID"));
         filmLengthCol.setCellValueFactory(new PropertyValueFactory<>("length"));
         filmTitleCol.setCellValueFactory(new PropertyValueFactory<>("title"));
@@ -32,11 +42,14 @@ public class Controller {
         replaceCostCol.setCellValueFactory(new PropertyValueFactory<>("replacementCost"));
         categoryNameCol.setCellValueFactory(new PropertyValueFactory<>("category"));
         ratingCol.setCellValueFactory(new PropertyValueFactory<>("rating"));
-        listna.getHoldMyFilm().setAll(test.filmObjects());
 
+        listna.getHoldMyFilm().setAll(test.filmObjects());
+        filmTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
 
-
+public void mouseEventActorList(){
+    actorList.getItems().setAll(test.getActors(filmTable.focusModelProperty().get().getFocusedItem().getFilmID()));
+}
 
 }

@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("premGui.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Scrum me harder");
         primaryStage.setScene(new Scene(root, 1100, 1000));
         primaryStage.show();
     }

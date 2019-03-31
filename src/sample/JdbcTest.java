@@ -2,7 +2,7 @@ package sample;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class JdbcTest {
 
@@ -12,6 +12,7 @@ public class JdbcTest {
     //
     private static Connection connection = null;
     private  Statement statement = null;
+
     private ResultSet resultSet = null;
 
     private PreparedStatement preparedStatement;
@@ -26,7 +27,6 @@ public class JdbcTest {
     public  ArrayList<FilmObject> filmObjects(){
         ArrayList<FilmObject> filmObjectArrayList = new ArrayList<>();
         try {
-
             statement = connection.createStatement();
             resultSet = statement.executeQuery("SELECT * FROM sakila.film a \n" +
                     "inner join film_category f\n" +
@@ -46,6 +46,28 @@ public class JdbcTest {
 
         }
         return filmObjectArrayList;
+
+    }
+
+
+    public ArrayList<ActorObject> getActors(int filmID){
+        ArrayList<ActorObject> actorObjectsArray = new ArrayList<>();
+        try {
+            preparedStatement = connection.prepareStatement("select a.first_name,a.last_name , a.actor_id\n" +
+                    "from film f \n" +
+                    "inner join film_actor fa on f.film_id = fa.film_id\n" +
+                    "inner join actor a on fa.actor_id=a.actor_id\n" +
+                    "where f.film_id = ?;");
+            preparedStatement.setInt(1,filmID);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                ActorObject abc = new ActorObject( resultSet.getInt("actor_id") ,resultSet.getString("first_name"),resultSet.getString("last_name"));
+                actorObjectsArray.add(abc);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return actorObjectsArray;
     }
 
 }
