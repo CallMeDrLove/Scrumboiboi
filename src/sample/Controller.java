@@ -1,19 +1,15 @@
 package sample;
 
-import javafx.collections.ObservableList;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
+
 import javafx.scene.image.ImageView;
 
-import java.io.File;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Controller {
     HoldMyObsList listna = new HoldMyObsList();
@@ -30,8 +26,7 @@ public class Controller {
     ListView<ActorObject> actorList;
     @FXML
     ImageView kungView , kungView2 , kungView3;
-//    File file = new File("G:\\DesignPatterns\\Scrumboi\\9knug.jpg");
-//    Image knugen = new Image(file.toURI().toString());
+
 
 
 
@@ -55,7 +50,7 @@ public class Controller {
 
         listna.getHoldMyFilm().setAll(test.filmObjects());
         filmTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        
+
         kungView.setImage(ImageHolder.getKnugen());
         kungView2.setImage(ImageHolder.getKnugen2());
         kungView3.setImage(ImageHolder.getKnugen3());
