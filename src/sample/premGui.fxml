@@ -6,10 +6,11 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="962.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="962.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <TabPane accessibleRole="PARENT" prefHeight="890.0" prefWidth="1115.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
          <tabs>
@@ -17,7 +18,7 @@
                <content>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <TableView editable="true" fx:id="filmTable" onMouseClicked="#mouseEventActorList">
+                        <TableView fx:id="filmTable" editable="true" onMouseClicked="#mouseEventActorList">
                            <columns>
                               <TableColumn fx:id="filmIdCol" minWidth="0.0" prefWidth="77.0" text="Film_id" />
                               <TableColumn fx:id="filmTitleCol" prefWidth="73.0" text="Title" />
@@ -39,7 +40,8 @@
                         </TableView>
                         <AnchorPane VBox.vgrow="ALWAYS">
                            <children>
-                              <ListView editable="true" prefHeight="478.0" prefWidth="342.0"  fx:id="actorList"/>
+                              <ListView fx:id="actorList" editable="true" prefHeight="478.0" prefWidth="342.0" />
+                              <ImageView fx:id="kungView" fitHeight="435.0" fitWidth="447.0" layoutX="853.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                            <VBox.margin>
                               <Insets top="10.0" />
@@ -75,6 +77,7 @@
                         <AnchorPane prefHeight="478.0" prefWidth="439.0" VBox.vgrow="ALWAYS">
                            <children>
                               <ListView editable="true" prefHeight="478.0" prefWidth="342.0" />
+                              <ImageView fx:id="kungView2" fitHeight="435.0" fitWidth="447.0" layoutX="853.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                            <VBox.margin>
                               <Insets top="10.0" />
@@ -107,6 +110,7 @@
                         <AnchorPane VBox.vgrow="ALWAYS">
                            <children>
                               <ListView editable="true" prefHeight="478.0" prefWidth="342.0" />
+                              <ImageView fx:id="kungView3" fitHeight="435.0" fitWidth="447.0" layoutX="853.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                            <VBox.margin>
                               <Insets top="10.0" />

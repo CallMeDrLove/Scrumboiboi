@@ -12,7 +12,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("premGui.fxml"));
         primaryStage.setTitle("Scrum me harder");
-        primaryStage.setScene(new Scene(root, 1100, 1000));
+        primaryStage.setScene(new Scene(root, 1400, 1000));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
