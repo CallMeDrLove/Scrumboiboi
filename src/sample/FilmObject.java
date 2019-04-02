@@ -15,6 +15,17 @@ private String specialFeatures;
 private String rating;
 private String category;
 
+    public FilmObject(int filmID, String title, String description, String releaseYear, String language, int length, String specialFeatures, String rating, String category) {
+        this.filmID = filmID;
+        this.title = title;
+        Description = description;
+        this.releaseYear = releaseYear;
+        this.language = language;
+        this.length = length;
+        this.specialFeatures = specialFeatures;
+        this.rating = rating;
+        this.category = category;
+    }
 
     public FilmObject(int filmID, String title, String description, String releaseYear, String language, double rentalDuration, double rentalRate, int length, double replacementCost, String specialFeatures, String rating, String category) {
         this.filmID = filmID;
@@ -31,18 +42,7 @@ private String category;
         this.category = category;
     }
 
-    public FilmObject(int filmID, String title, String description, String releaseYear, String language, double rentalDuration, double rentalRate, int length, double replacementCost, String specialFeatures) {
-        this.filmID = filmID;
-        this.title = title;
-        Description = description;
-        this.releaseYear = releaseYear;
-        this.language = language;
-        this.rentalDuration = rentalDuration;
-        this.rentalRate = rentalRate;
-        this.length = length;
-        this.replacementCost = replacementCost;
-        this.specialFeatures = specialFeatures;
-    }
+
 
     public int getFilmID() {
         return filmID;

@@ -25,10 +25,10 @@
                               <TableColumn fx:id="filmDescCol" prefWidth="75.0" text="Description" />
                               <TableColumn fx:id="filmYearCol" prefWidth="75.0" text="Release_year" />
                               <TableColumn fx:id="languageCol" prefWidth="75.0" text="Language" />
-                              <TableColumn fx:id="rentalDurCol" prefWidth="75.0" text="Rental_duration" />
-                              <TableColumn fx:id="rentalRateCol" prefWidth="75.0" text="Rental_rate" />
+                              <!--<TableColumn fx:id="rentalDurCol" prefWidth="75.0" text="Rental_duration" />-->
+                              <!--<TableColumn fx:id="rentalRateCol" prefWidth="75.0" text="Rental_rate" />-->
                               <TableColumn fx:id="filmLengthCol" prefWidth="75.0" text="Length" />
-                              <TableColumn fx:id="replaceCostCol" prefWidth="75.0" text="Replacement_cost" />
+                              <!--<TableColumn fx:id="replaceCostCol" prefWidth="75.0" text="Replacement_cost" />-->
                               <TableColumn fx:id="ratingCol" prefWidth="75.0" text="Rating" />
                               <TableColumn fx:id="categoryNameCol" prefWidth="75.0" text="Category" />
                               <TableColumn fx:id="specialFeaturesCol" prefWidth="75.0" text="Special_Features" />

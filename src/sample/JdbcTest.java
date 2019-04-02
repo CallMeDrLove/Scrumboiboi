@@ -38,8 +38,11 @@ public class JdbcTest {
                     "order by a.film_id");
 
             while (resultSet.next()){
-                FilmObject object =  new FilmObject(resultSet.getInt("film_id"),resultSet.getString("title"),resultSet.getString("description"),resultSet.getString("release_year"),resultSet.getString(21), resultSet.getDouble("rental_duration"),
-                        resultSet.getDouble("rental_rate"), resultSet.getInt("length"), resultSet.getDouble("replacement_cost"), resultSet.getString("special_features"),resultSet.getString("rating"),resultSet.getString(18));
+//                FilmObject object =  new FilmObject(resultSet.getInt("film_id"),resultSet.getString("title"),resultSet.getString("description"),resultSet.getString("release_year"),resultSet.getString(21), resultSet.getDouble("rental_duration"),
+//                        resultSet.getDouble("rental_rate"), resultSet.getInt("length"), resultSet.getDouble("replacement_cost"), resultSet.getString("special_features"),resultSet.getString("rating"),resultSet.getString(18));
+//                filmObjectArrayList.add(object);
+                FilmObject object =  new FilmObject(resultSet.getInt("film_id"),resultSet.getString("title"),resultSet.getString("description"),resultSet.getString("release_year"),
+                        resultSet.getString(21),resultSet.getInt("length"),resultSet.getString("special_features"),resultSet.getString("rating"),resultSet.getString(18));
                 filmObjectArrayList.add(object);
             }
         }catch (SQLException e){

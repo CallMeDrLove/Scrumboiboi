@@ -20,8 +20,8 @@ public class Controller {
     TableColumn<FilmObject, Integer> filmIdCol , filmLengthCol;
     @FXML
     TableColumn<FilmObject , String> filmTitleCol , filmDescCol , filmYearCol , languageCol , specialFeaturesCol, categoryNameCol, ratingCol;
-    @FXML
-    TableColumn<FilmObject , Double> rentalDurCol , rentalRateCol , replaceCostCol;
+//    @FXML
+//    TableColumn<FilmObject , Double> rentalDurCol , rentalRateCol , replaceCostCol;
     @FXML
     ListView<ActorObject> actorList;
     @FXML
@@ -42,9 +42,9 @@ public class Controller {
         filmYearCol.setCellValueFactory(new PropertyValueFactory<>("releaseYear"));
         languageCol.setCellValueFactory(new PropertyValueFactory<>("language"));
         specialFeaturesCol.setCellValueFactory(new PropertyValueFactory<>("specialFeatures"));
-        rentalDurCol.setCellValueFactory(new PropertyValueFactory<>("rentalDuration"));
-        rentalRateCol.setCellValueFactory(new PropertyValueFactory<>("rentalRate"));
-        replaceCostCol.setCellValueFactory(new PropertyValueFactory<>("replacementCost"));
+//        rentalDurCol.setCellValueFactory(new PropertyValueFactory<>("rentalDuration"));
+//        rentalRateCol.setCellValueFactory(new PropertyValueFactory<>("rentalRate"));
+//        replaceCostCol.setCellValueFactory(new PropertyValueFactory<>("replacementCost"));
         categoryNameCol.setCellValueFactory(new PropertyValueFactory<>("category"));
         ratingCol.setCellValueFactory(new PropertyValueFactory<>("rating"));
 
@@ -63,3 +63,4 @@ public void mouseEventActorList(){
 }
 
 }
+
