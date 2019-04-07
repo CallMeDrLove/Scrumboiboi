@@ -42,7 +42,7 @@ public class ActorObject {
 
     @Override
     public String toString() {
-        return  "Actor \n" + " " +
+        return  "Actor \n"  +
                 firstName + " " +
                  lastName;
     }
