@@ -55,42 +55,42 @@
                   </VBox>
                </content>
             </Tab>
-            <Tab text="Store">
-               <content>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <TableView editable="true">
-                           <columns>
-                              <TableColumn minWidth="0.0" prefWidth="77.0" text="Film_id" />
-                              <TableColumn prefWidth="73.0" text="Title" />
-                              <TableColumn prefWidth="75.0" text="Description" />
-                              <TableColumn prefWidth="75.0" text="Release_year" />
-                              <TableColumn prefWidth="75.0" text="Language_id" />
-                              <TableColumn prefWidth="75.0" text="Rental_duration" />
-                              <TableColumn prefWidth="75.0" text="Rental_rate" />
-                              <TableColumn prefWidth="75.0" text="Length" />
-                              <TableColumn prefWidth="75.0" text="Replacement_cost" />
-                              <TableColumn prefWidth="75.0" text="Rating" />
-                              <TableColumn prefWidth="75.0" text="Cat_name" />
-                              <TableColumn prefWidth="75.0" text="Column X" />
-                           </columns>
-                           <columnResizePolicy>
-                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                           </columnResizePolicy>
-                        </TableView>
-                        <AnchorPane prefHeight="478.0" prefWidth="439.0" VBox.vgrow="ALWAYS">
-                           <children>
-                              <ListView editable="true" prefHeight="478.0" prefWidth="342.0" />
-                              <ImageView fx:id="kungView2" fitHeight="435.0" fitWidth="447.0" layoutX="853.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
-                           </children>
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </AnchorPane>
-                     </children>
-                  </VBox>
-               </content>
-            </Tab>
+            <!--<Tab text="Store">-->
+               <!--<content>-->
+                  <!--<VBox prefHeight="200.0" prefWidth="100.0">-->
+                     <!--<children>-->
+                        <!--<TableView editable="true">-->
+                           <!--<columns>-->
+                              <!--<TableColumn minWidth="0.0" prefWidth="77.0" text="Film_id" />-->
+                              <!--<TableColumn prefWidth="73.0" text="Title" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Description" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Release_year" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Language_id" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Rental_duration" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Rental_rate" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Length" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Replacement_cost" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Rating" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Cat_name" />-->
+                              <!--<TableColumn prefWidth="75.0" text="Column X" />-->
+                           <!--</columns>-->
+                           <!--<columnResizePolicy>-->
+                              <!--<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />-->
+                           <!--</columnResizePolicy>-->
+                        <!--</TableView>-->
+                        <!--<AnchorPane prefHeight="478.0" prefWidth="439.0" VBox.vgrow="ALWAYS">-->
+                           <!--<children>-->
+                              <!--<ListView editable="true" prefHeight="478.0" prefWidth="342.0" />-->
+                              <!--<ImageView fx:id="kungView2" fitHeight="435.0" fitWidth="447.0" layoutX="853.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />-->
+                           <!--</children>-->
+                           <!--<VBox.margin>-->
+                              <!--<Insets top="10.0" />-->
+                           <!--</VBox.margin>-->
+                        <!--</AnchorPane>-->
+                     <!--</children>-->
+                  <!--</VBox>-->
+               <!--</content>-->
+            <!--</Tab>-->
             <Tab text="Customer">
                <content>
                   <VBox prefHeight="200.0" prefWidth="100.0">
@@ -125,7 +125,7 @@
                   </VBox>
                </content>
             </Tab>
-            <Tab text="betastore">
+            <Tab text="Store">
                <content>
                   <VBox alignment="TOP_CENTER" prefHeight="267.0" prefWidth="711.0">
                      <children>
@@ -155,7 +155,7 @@
                         </HBox>
                         <HBox prefHeight="312.0" prefWidth="1328.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <ChoiceBox fx:id="ChooseStore" onAction="#onActionChooise" prefWidth="150.0">
+                              <ChoiceBox fx:id="ChooseStore" onAction="#onActionChooise" prefWidth="150.0" >
                                  <items>
                                     <FXCollections fx:factory="observableArrayList">
                                        <String fx:value="Store 1" />

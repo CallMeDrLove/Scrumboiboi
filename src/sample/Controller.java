@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 public class Controller {
     HoldMyObsList listna = new HoldMyObsList();
-    JdbcTest test = new JdbcTest();
+    Film test = new Film();
     @FXML
     TableView<FilmObject> filmTable;
     @FXML
@@ -43,7 +43,7 @@ public class Controller {
 
 
     public void initialize(){
-        //JdbcTest.ConnectToDB();
+        //Film.ConnectToDB();
         JDBCConnector.getInstance().connect();
         filmTable.setItems(listna.getHoldMyFilm());
         actorList.setItems(listna.getHoldMyActor());
@@ -78,7 +78,7 @@ public class Controller {
         payRetrunCol.setCellValueFactory(new PropertyValueFactory<>("return_date"));
 
         kungView.setImage(ImageHolder.getKnugen());
-        kungView2.setImage(ImageHolder.getKnugen2());
+        //kungView2.setImage(ImageHolder.getKnugen2());
         kungView3.setImage(ImageHolder.getKnugen3());
 
 

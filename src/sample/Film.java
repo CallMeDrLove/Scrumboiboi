@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import Connector.JDBCConnector;
 
 
-public class JdbcTest {
+public class Film {
 
 //    static final String username = "root";
 //    static final String password = "mySQL_Password123";
